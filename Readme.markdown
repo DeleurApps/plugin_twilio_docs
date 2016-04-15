@@ -22,9 +22,9 @@ The twilio plugin can be used in your [Corona](https://coronalabs.com/products/c
 
 [shutdown()](#shutdown)
 
-[isInitialized()](#isInitialized)
+[isInitialized()](#isinitialized)
 
-[createDevice()](#createDevice)
+[createDevice()](#createdevice)
 
 [release()](#release)
 
@@ -42,59 +42,59 @@ The twilio plugin can be used in your [Corona](https://coronalabs.com/products/c
 
 [disconnect()](#disconnect)
 
-[disconnectAll()](#disconnectAll)
+[disconnectAll()](#disconnectall)
 
-[sendDigits()](#sendDigits)
+[sendDigits()](#senddigits)
 
-[getCapabilityToken()](#getCapabilityToken)
+[getCapabilityToken()](#getcapabilitytoken)
 
-[updateCapabilityToken()](#updateCapabilityToken)
+[updateCapabilityToken()](#updatecapabilitytoken)
 
-[getCapabilities()](#getCapabilities)
+[getCapabilities()](#getcapabilities)
 
-[getState()](#getState)
+[getState()](#getstate)
 
-[setIncomingSoundEnabled()](#setIncomingSoundEnabled)
+[setIncomingSoundEnabled()](#setincomingsoundenabled)
 
-[isIncomingSoundEnabled()](#isIncomingSoundEnabled)
+[isIncomingSoundEnabled()](#isincomingsoundenabled)
 
-[setOutgoingSoundEnabled()](#setOutgoingSoundEnabled)
+[setOutgoingSoundEnabled()](#setoutgoingsoundenabled)
 
-[isOutgoingSoundEnabled()](#isOutgoingSoundEnabled)
+[isOutgoingSoundEnabled()](#isoutgoingsoundenabled)
 
-[setDisconnectSoundEnabled()](#setDisconnectSoundEnabled)
+[setDisconnectSoundEnabled()](#setdisconnectsoundenabled)
 
-[isDisconnectSoundEnabled()](#isDisconnectSoundEnabled)
+[isDisconnectSoundEnabled()](#isdisconnectsoundenabled)
 
-[getConnectionParameters()](#getConnectionParameters)
+[getConnectionParameters()](#getconnectionrarameters)
 
-[getConnectionState()](#getConnectionState)
+[getConnectionState()](#getconnectionstate)
 
-[setMuted()](#setMuted)
+[setMuted()](#setmuted)
 
-[isMuted()](#isMuted)
+[isMuted()](#ismuted)
 
-[setReceivePresenceEvents()](#setReceivePresenceEvents)
+[setReceivePresenceEvents()](#setreceivepresenceevents)
 
 ## Events Overview
 
-[onTwilioInitialization](#onTwilioInitialization)
+[onTwilioInitialization](#ontwilioinitialization)
 
-[onCreateDeviceError](#onCreateDeviceError)
+[onCreateDeviceError](#oncreatedeviceerror)
 
-[onStartListening](#onStartListening)
+[onStartListening](#onstartlistening)
 
-[onStopListening](#onStopListening)
+[onStopListening](#onstoplistening)
 
-[onPresenceChanged](#onPresenceChanged)
+[onPresenceChanged](#onpresencechanged)
 
-[onConnecting](#onConnecting)
+[onConnecting](#onconnecting)
 
-[onConnected](#onConnected)
+[onConnected](#onconnected)
 
-[onDisconnected](#onDisconnected)
+[onDisconnected](#ondisconnected)
 
-[onIncomingConnection](#onIncomingConnection)
+[onIncomingConnection](#onincomingconnection)
 
 ## Project Configuration
 
