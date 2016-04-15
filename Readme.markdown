@@ -18,83 +18,83 @@ The twilio plugin can be used in your [Corona](https://coronalabs.com/products/c
 
 ## Functions Overview
 
-##### [initialize()](#initialize())
+[initialize()](#initialize)
 
-##### [shutdown()](#shutdown())
+[shutdown()](#shutdown)
 
-##### [isInitialized()](#isInitialized())
+[isInitialized()](#isInitialized)
 
-##### [createDevice()](#createDevice())
+[createDevice()](#createDevice)
 
-##### [release()](#release())
+[release()](#release)
 
-##### [listen()](#listen())
+[listen()](#listen)
 
-##### [unlisten()](#unlisten())
+[unlisten()](#unlisten)
 
-##### [connect()](#connect())
+[connect()](#connect)
 
-##### [accept()](#accept())
+[accept()](#accept)
 
-##### [ignore()](#ignore())
+[ignore()](#ignore)
 
-##### [reject()](#reject())
+[reject()](#reject)
 
-##### [disconnect()](#disconnect())
+[disconnect()](#disconnect)
 
-##### [disconnectAll()](#disconnectAll())
+[disconnectAll()](#disconnectAll)
 
-##### [sendDigits()](#sendDigits())
+[sendDigits()](#sendDigits)
 
-##### [getCapabilityToken()](#getCapabilityToken())
+[getCapabilityToken()](#getCapabilityToken)
 
-##### [updateCapabilityToken()](#updateCapabilityToken())
+[updateCapabilityToken()](#updateCapabilityToken)
 
-##### [getCapabilities()](#getCapabilities())
+[getCapabilities()](#getCapabilities)
 
-##### [getState()](#getState())
+[getState()](#getState)
 
-##### [setIncomingSoundEnabled()](#setIncomingSoundEnabled())
+[setIncomingSoundEnabled()](#setIncomingSoundEnabled)
 
-##### [isIncomingSoundEnabled()](#isIncomingSoundEnabled())
+[isIncomingSoundEnabled()](#isIncomingSoundEnabled)
 
-##### [setOutgoingSoundEnabled()](#setOutgoingSoundEnabled())
+[setOutgoingSoundEnabled()](#setOutgoingSoundEnabled)
 
-##### [isOutgoingSoundEnabled()](#isOutgoingSoundEnabled())
+[isOutgoingSoundEnabled()](#isOutgoingSoundEnabled)
 
-##### [setDisconnectSoundEnabled()](#setDisconnectSoundEnabled())
+[setDisconnectSoundEnabled()](#setDisconnectSoundEnabled)
 
-##### [isDisconnectSoundEnabled()](#isDisconnectSoundEnabled())
+[isDisconnectSoundEnabled()](#isDisconnectSoundEnabled)
 
-##### [getConnectionParameters()](#getConnectionParameters())
+[getConnectionParameters()](#getConnectionParameters)
 
-##### [getConnectionState()](#getConnectionState())
+[getConnectionState()](#getConnectionState)
 
-##### [setMuted()](#setMuted())
+[setMuted()](#setMuted)
 
-##### [isMuted()](#isMuted())
+[isMuted()](#isMuted)
 
-##### [setReceivePresenceEvents()](#setReceivePresenceEvents())
+[setReceivePresenceEvents()](#setReceivePresenceEvents)
 
 ## Events Overview
 
-##### [onTwilioInitialization](#onTwilioInitialization)
+[onTwilioInitialization](#onTwilioInitialization)
 
-##### [onCreateDeviceError](#onCreateDeviceError)
+[onCreateDeviceError](#onCreateDeviceError)
 
-##### [onStartListening](#onStartListening)
+[onStartListening](#onStartListening)
 
-##### [onStopListening](#onStopListening)
+[onStopListening](#onStopListening)
 
-##### [onPresenceChanged](#onPresenceChanged)
+[onPresenceChanged](#onPresenceChanged)
 
-##### [onConnecting](#onConnecting)
+[onConnecting](#onConnecting)
 
-##### [onConnected](#onConnected)
+[onConnected](#onConnected)
 
-##### [onDisconnected](#onDisconnected)
+[onDisconnected](#onDisconnected)
 
-##### [onIncomingConnection](#onIncomingConnection)
+[onIncomingConnection](#onIncomingConnection)
 
 ## Project Configuration
 
@@ -552,7 +552,7 @@ _[Boolean](https://docs.coronalabs.com/api/type/Boolean.html)._ `true` to enable
 
 #### onTwilioInitialization
 
-Called after [twilio.initialize()](#initialize()) has resolved.
+Called after [twilio.initialize()](#initialize) has resolved.
 
 ##### Properties
 
@@ -574,7 +574,7 @@ _[String](https://docs.coronalabs.com/api/type/String.html)._ If event.isError i
 
 #### onCreateDeviceError
 
-Called if there is an error after [twilio.createDevice()](#createDevice()) is called.
+Called if there is an error after [twilio.createDevice()](#createDevice) is called.
 
 ##### Properties
 
