@@ -9,8 +9,19 @@
 
 ## Overview
 
-The twilio plugin can be used in your [Corona](https://coronalabs.com/products/corona-sdk/) project. It enables you to...
+The twilio plugin can be used in your [Corona](https://coronalabs.com/products/corona-sdk/) project. This enables you do integrate the [Twilio Client](https://www.twilio.com/docs/api/client) into your application. Twilio Client extends the power of Twilio beyond the traditional telephone network. With Twilio Client you are no longer restricted to building Twilio applications that rely on interacting with traditional telephones.
 
+You setup your device and establish a connection to Twilio. Audio from your device's microphone is sent to Twilio, and Twilio plays audio through your device's speakers, like on a normal phone call. But with Twilio Client, your device need not be a phone.
+
+When you initiate a connection using Twilio Client, you're not connecting to another phone directly. Rather, you're connecting to Twilio and instructing Twilio to fetch TwiML from your server to handle the connection. This is analogous to the way Twilio handles incoming calls from a real phone.
+
+## Getting Started
+
+Because Twilio Client connections aren't made to a specific phone number, Twilio relies on a [Twilio Application](https://www.twilio.com/docs/api/rest/applications) within your account to determine how to interact with your server. A Twilio Application is just a convenient way to store a set of URLs, like the VoiceUrl and SmsUrl on a phone number, but without locking them to a specific phone number. This makes Twilio Applications perfect for handling connections from Twilio Client (which is actually why we created them in the first place).
+
+So when your device initiates a Twilio Client connection to Twilio, a request is made to the VoiceUrl property of an Application within your account. You specify the Application you're connecting to with a [Capability Token](https://www.twilio.com/docs/client/capability-tokens). Twilio uses the TwiML response from its request to that Application's VoiceUrl to direct what happens with the Client connection.
+
+To get started you will need your Twilio Account SID and Auth Token. You can find these in your [Account Dashboard](https://www.twilio.com/user/account/). If you don't have an account, you can sign up for a free [trial account](https://www.twilio.com/try-twilio). You will also need to set up a server that serves your TwiML application. You can find a sample server in this [guide](https://www.twilio.com/docs/quickstart/php/ios-client/setup)
 
 ## Syntax
 
@@ -748,4 +759,8 @@ More support is available from the Deleur Apps team:
 
 * [E-mail](mailto://deleurapps@gmail.com)
 * [Corona Forums](https://forums.coronalabs.com/forum/654-corona-store-plugins/)
+
+## Thanks
+
+* [Spring Morning Software](http://springmorning.nl)
 
