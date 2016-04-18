@@ -4,7 +4,7 @@
 | -------------------- | ---------------------------------------------------------------
 | __Type__             | [Library](http://docs.coronalabs.com/api/type/Library.html)
 | __Corona Store__     | [twilio](http://store.coronalabs.com/plugin/twilio)
-| __Sample Code__      | SAMPLE_CODE_URL
+| __Sample Code__      | [View Sample on GitHub](https://github.com/DeleurApps/plugin_twilio_sample)
 | __Platforms__        | Android
 
 ## Overview
@@ -22,6 +22,41 @@ Because Twilio Client connections aren't made to a specific phone number, Twilio
 So when your device initiates a Twilio Client connection to Twilio, a request is made to the VoiceUrl property of an Application within your account. You specify the Application you're connecting to with a [Capability Token](https://www.twilio.com/docs/client/capability-tokens). Twilio uses the TwiML response from its request to that Application's VoiceUrl to direct what happens with the Client connection.
 
 To get started you will need your Twilio Account SID and Auth Token. You can find these in your [Account Dashboard](https://www.twilio.com/user/account/). If you don't have an account, you can sign up for a free [trial account](https://www.twilio.com/try-twilio). You will also need to set up a server that serves your TwiML application. You can find a sample server in this [guide](https://www.twilio.com/docs/quickstart/php/ios-client/setup)
+
+
+### Corona Store Activation
+
+In order to use this plugin, you must activate the plugin at the [Corona Store](http://store.coronalabs.com/plugin/PLUGIN_NAME).
+
+
+### SDK
+
+When you build using the Corona Simulator, the server automatically takes care of integrating the plugin into your project.
+
+All you need to do is add an entry into a `plugins` table of your `build.settings`. The following is an example of a minimal `build.settings` file:
+
+``````
+settings =
+{
+	plugins =
+	{
+		-- key is the name passed to Lua's 'require()'
+		["plugin.twilio"] =
+		{
+			-- required
+			publisherId = "com.deleurapps",
+		},
+	},
+}
+``````
+
+### Android
+
+Before calling [twilio.initialize()](#initialize), you must request the `android.permission.RECORD_AUDIO` permission for android. To do so,call the following function:
+
+```lua
+native.showPopup( "requestAppPermission", {appPermission = "android.permission.RECORD_AUDIO", urgency = "Critical", } )
+```
 
 ## Syntax
 
@@ -762,5 +797,5 @@ More support is available from the Deleur Apps team:
 
 ## Thanks
 
-* [Spring Morning Software](http://springmorning.nl)
+* Plugin sponsored by [Spring Morning Software](http://springmorning.nl)
 
