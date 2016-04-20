@@ -4,6 +4,7 @@ site_author: Stiven Deleur
 copyright: Twilio Plugin for Corona SDK - &copy;2016 Stiven Deleur - Deleur Apps
 google_analytics: ['UA-76666345-1', 'auto']
 markdown_extensions:
+  - extra
   - admonition
   - fenced_code
   - codehilite:
@@ -12,3 +13,6 @@ markdown_extensions:
       pygments_style: borland
   - toc:
       permalink: True
+theme: readthedocs
+pages:
+    - 'Twilio: Plugin API Docs': 'index.md'

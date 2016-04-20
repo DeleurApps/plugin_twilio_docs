@@ -1,4 +1,4 @@
-# Twilio: Plugin API Docs
+# Welcome
 
 |                      | &nbsp;
 | -------------------- | ---------------------------------------------------------------
@@ -23,11 +23,9 @@ So when your device initiates a Twilio Client connection to Twilio, a request is
 
 To get started you will need your Twilio Account SID and Auth Token. You can find these in your [Account Dashboard](https://www.twilio.com/user/account/). If you don't have an account, you can sign up for a free [trial account](https://www.twilio.com/try-twilio). You will also need to set up a server that serves your TwiML application. You can find a sample server in this [guide](https://www.twilio.com/docs/quickstart/php/ios-client/setup)
 
-
 ### Corona Store Activation
 
 In order to use this plugin, you must activate the plugin at the [Corona Store](http://store.coronalabs.com/plugin/PLUGIN_NAME).
-
 
 ### SDK
 
@@ -142,33 +140,6 @@ native.showPopup( "requestAppPermission", {appPermission = "android.permission.R
 
 [onIncomingConnection](#onincomingconnection)
 
-## Project Configuration
-
-### Corona Store Activation
-
-In order to use this plugin, you must activate the plugin at the [Corona Store](http://store.coronalabs.com/plugin/twilio).
-
-### SDK
-
-When you build using the Corona Simulator, the server automatically takes care of integrating the plugin into your project.
-
-All you need to do is add an entry into a `plugins` table of your `build.settings`. The following is an example of a minimal `build.settings` file:
-
-``````
-settings =
-{
-	plugins =
-	{
-		-- key is the name passed to Lua's 'require()'
-		["plugin.twilio"] =
-		{
-			-- required
-			publisherId = "com.deleurapps",
-		},
-	},
-}
-``````
-
 ## Functions
 
 #### initialize()
@@ -218,7 +189,7 @@ If the incoming capabilities are defined, then the device will automatically beg
 	twilio.createDevice(capabilityToken)
 
 ###### capabilityToken (required)
-_[String](https://docs.coronalabs.com/api/type/String.html)._ A signed JSON Web Token that defines the features available to the Device. These may be created using the Twilio Helper Libraries available at http://www.twilio.com. The capabilities are used to begin listening for incoming connections and provide the default parameters used for establishing outgoing connections. Please visit [Capability Tokens](http://www.twilio.com/docs/client/capability-tokens) for more information.
+_[String](https://docs.coronalabs.com/api/type/String.html)._ A signed JSON Web Token that defines the features available to the Device. These may be created using the Twilio Helper Libraries available [here](http://www.twilio).com. The capabilities are used to begin listening for incoming connections and provide the default parameters used for establishing outgoing connections. Please visit [Capability Tokens](http://www.twilio.com/docs/client/capability-tokens) for more information.
 
 #### release()
 
@@ -385,7 +356,7 @@ Current capabilities of the Device. Returns _[table](https://docs.coronalabs.com
 
 	twilio.getCapabilities()
 
-##### Properties
+##### _Properties_
 
 ###### INCOMING
 
@@ -524,7 +495,7 @@ Outgoing connection parameters are defined by the union of optional application 
 
 	twilio.getConnectionParameters()
 
-##### Properties
+##### _Properties_
 
 ###### From
 
@@ -600,21 +571,21 @@ _[Boolean](https://docs.coronalabs.com/api/type/Boolean.html)._ `true` to enable
 
 Called after [twilio.initialize()](#initialize) has resolved.
 
-##### Properties
+##### _Properties_
 
-###### event.name
+###### __event.name__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "twilioEvent"
 
-###### event.type
+###### __event.type__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "onTwilioInitialization"
 
-###### event.isError
+###### __event.isError__
 
 _[Boolean](https://docs.coronalabs.com/api/type/Boolean.html)._ Value indicating whether an error occurred.
 
-###### event.error
+###### __event.error__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ If event.isError is `true`, this is a string value stating the reason.
 
@@ -622,21 +593,21 @@ _[String](https://docs.coronalabs.com/api/type/String.html)._ If event.isError i
 
 Called if there is an error after [twilio.createDevice()](#createDevice) is called.
 
-##### Properties
+##### _Properties_
 
-###### event.name
+###### __event.name__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "twilioEvent"
 
-###### event.type
+###### __event.type__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "onCreateDeviceError"
 
-###### event.isError
+###### __event.isError__
 
 _[Boolean](https://docs.coronalabs.com/api/type/Boolean.html)._ Value indicating whether an error occurred.
 
-###### event.error
+###### __event.error__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ If event.isError is `true`, this is a string value stating the reason.
 
@@ -644,13 +615,13 @@ _[String](https://docs.coronalabs.com/api/type/String.html)._ If event.isError i
 
 Called when the Device has started listening for incoming connections.
 
-##### Properties
+##### _Properties_
 
-###### event.name
+###### __event.name__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "twilioEvent"
 
-###### event.type
+###### __event.type__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "onStartListening"
 
@@ -658,27 +629,27 @@ _[String](https://docs.coronalabs.com/api/type/String.html)._ "onStartListening"
 
 Called when the Device has stopped listening for incoming connections.
 
-##### Properties
+##### _Properties_
 
-###### event.name
+###### __event.name__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "twilioEvent"
 
-###### event.type
+###### __event.type__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "onStopListening"
 
-###### event.isError
+###### __event.isError__
 
 _[Boolean](https://docs.coronalabs.com/api/type/Boolean.html)._ Value indicating whether an error occurred.
 
-###### event.error
+###### __event.error__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ If event.isError is `true`, this is a string value stating the reason.
 
-###### event.errorCode
+###### __event.errorCode__
 
-_[Number](https://docs.coronalabs.com/api/type/String.html)._ If event.isError is `true`, this is the error code that pinpoints the reason. For a list of error codes and their meanings, see http://www.twilio.com/docs/client/errors.
+_[Number](https://docs.coronalabs.com/api/type/String.html)._ If event.isError is `true`, this is the error code that pinpoints the reason. For a list of error codes and their meanings, see [Twilio Errors](http://www.twilio.com/docs/client/errors).
 
 #### onPresenceChanged
 
@@ -690,21 +661,21 @@ A client is considered available even if another call is in progress.
 
 When your client disconnects the onStopListening event will be invoked, and when the device reconnects this method will be called again for every available online client.
 
-##### Properties
+##### _Properties_
 
-###### event.name
+###### __event.name__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "twilioEvent"
 
-###### event.type
+###### __event.type__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "onPresenceChanged"
 
-###### event.clientName
+###### __event.clientName__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ The client name for which the event applies.
 
-###### event.isAvailable
+###### __event.isAvailable__
 
 _[Boolean](https://docs.coronalabs.com/api/type/Boolean.html)._ Whether or not the client specified by name is currently connected to Twilio services for the account.
 
@@ -714,13 +685,13 @@ Called for a newly-created Connection when it is connecting to your Twilio appli
 
 When this occurs, Connection is in the `CONNECTING` state.
 
-##### Properties
+##### _Properties_
 
-###### event.name
+###### __event.name__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "twilioEvent"
 
-###### event.type
+###### __event.type__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "onConnecting"
 
@@ -732,13 +703,13 @@ Note that this does not necessarily mean your application has executed successfu
 
 When this occurs the Connection will be in the `CONNECTED` state.
 
-##### Properties
+##### _Properties_
 
-###### event.name
+###### __event.name__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "twilioEvent"
 
-###### event.type
+###### __event.type__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "onConnected"
 
@@ -750,52 +721,56 @@ After this callback has been called, it is safe to assume that the connection is
 
 When this occurs the Connection will be in the `DISCONNECTED` state.
 
-##### Properties
+##### _Properties_
 
-###### event.name
+###### __event.name__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "twilioEvent"
 
-###### event.type
+###### __event.type__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "Properties"
 
-###### event.isError
+###### __event.isError__
 
 _[Boolean](https://docs.coronalabs.com/api/type/Boolean.html)._ Value indicating whether an error occurred.
 
-###### event.error
+###### __event.error__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ If event.isError is `true`, this is a string value stating the reason.
 
-###### event.errorCode
+###### __event.errorCode__
 
-_[Number](https://docs.coronalabs.com/api/type/String.html)._ If event.isError is `true`, this is the error code that pinpoints the reason. For a list of error codes and their meanings, see http://www.twilio.com/docs/client/errors.
+_[Number](https://docs.coronalabs.com/api/type/String.html)._ If event.isError is `true`, this is the error code that pinpoints the reason. For a list of error codes and their meanings, see [Twilio Errors](http://www.twilio.com/docs/client/errors).
 
 #### onIncomingConnection
 
-##### Properties
+##### _Properties_
 
-###### event.name
+###### __event.name__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "twilioEvent"
 
-###### event.type
+###### __event.type__
 
 _[String](https://docs.coronalabs.com/api/type/String.html)._ "onIncomingConnection"
 
-###### event.params
+###### __event.params__
 
 _[Table](https://docs.coronalabs.com/api/type/Table.html)._ Table indicating the connection parameters of an incoming connection.
 
-## Support
+## About
 
-More support is available from the Deleur Apps team:
+Twilio Plugin for Corona SDK is developed, documented, and maitained by Stiven Deleur.
 
-* [E-mail](mailto://deleurapps@gmail.com)
+### Support
+
+* [E-mail](mailto:deleurapps@gmail.com)
 * [Corona Forums](https://forums.coronalabs.com/forum/654-corona-store-plugins/)
 
-## Thanks
+### Sponsors
 
 * Plugin sponsored by [Spring Morning Software](http://springmorning.nl)
+
+_Thank you!_
 
