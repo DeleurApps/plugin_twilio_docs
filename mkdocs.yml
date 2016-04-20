@@ -1,0 +1,14 @@
+site_name: Corona SDK Twilio Plugin
+repo_url: https://github.com/DeleurApps/plugin_Twilio_docs
+site_author: Stiven Deleur
+copyright: Twilio Plugin for Corona SDK - &copy;2016 Stiven Deleur - Deleur Apps
+google_analytics: ['UA-76666345-1', 'auto']
+markdown_extensions:
+  - admonition
+  - fenced_code
+  - codehilite:
+      noclasses: True
+      guess_lang: False
+      pygments_style: borland
+  - toc:
+      permalink: True
