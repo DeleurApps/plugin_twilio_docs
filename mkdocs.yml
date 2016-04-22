@@ -15,4 +15,7 @@ markdown_extensions:
       permalink: True
 theme: readthedocs
 pages:
-    - 'Twilio: Plugin API Docs': 'index.md'
+  - 'Introduction': 'index.md'
+  - 'Functions': 'functions.md'
+  - 'Events': 'events.md'
+  - 'About': 'about.md'
